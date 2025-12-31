@@ -23,11 +23,15 @@ def main():
         print(f"{item} not found in teh shopping list. ")
     elif choice == '3':
       print("shopping list")
+      if not shopping_list:
+        print("The list is currently empty.")
+      else:
+        for idx, item in enumerate(shopping_list, start=1):
+          print(f"{idx}. {item}")
     elif choice == '4':
       print("Goodbye!")
       break
     else:
       print("INvalid choice. Please try again.")
-      
-def main():
-  
+ 
+   
